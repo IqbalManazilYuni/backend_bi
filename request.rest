@@ -4,24 +4,45 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Iqbal Manazil Yuni",
-    "email": "manazilyuniiqbal@gmail.com",
+    "name": "Joe Doe",
+    "email": "manazilyuni@gmail.com",
+    "password": "123456",
+    "konfirm_password":"123456",
+    "role": "admin",
     "point": 100
 }
 ###
-GET http://localhost:5000/users/650407e5dc2ded1f58164c28
+GET http://localhost:5000/users/650d3eff8c3e9894596a908f
 ###
-PATCH http://localhost:5000/users/650407e5dc2ded1f58164c28
+PATCH http://localhost:5000/users/650d3eff8c3e9894596a908f
 Content-Type: application/json
 
 {
-    "name": "Iqbal Manazil",
-    "email": "manazilyuni@gmail.com",
+    "name": "Joe Doe",
+    "email": "joedoe@gmail.com",
+    "password": "122222",
+    "konfirm_password":"122222",
+    "jabatan": "Kepala Divisi",
     "point": 100
 }
 
 ###
-DELETE http://localhost:5000/users/650407e5dc2ded1f58164c28
+DELETE http://localhost:5000/users/650d4525fbf983cf6a320c91
 
 ###
 GET http://localhost:5000/pelanggarans
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "manazilyuni@gmail.com",
+    "password": "123456"
+}
+
+###
+DELETE  http://localhost:5000/logout
+
+###
+GET http://localhost:5000/me
