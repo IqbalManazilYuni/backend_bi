@@ -17,17 +17,6 @@ export const getUsersById = async (req, res) =>{
         res.status(404).json({message:error.message});
     }
 }
-
-export const saveUser = async (req, res) =>{
-    const user = new User(req.body);
-    try {
-        const insertuser = await user.save()
-        res.status(201).json(insertuser);
-    } catch (error) {
-        res.status(400).json({message:error.message});
-    }
-}
-
 export const updateUser = async (req, res) =>{
     try {
         const updateduser = await User.updateOne({_id:req.params.id},{$set:req.body});

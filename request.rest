@@ -46,3 +46,12 @@ DELETE  http://localhost:5000/logout
 
 ###
 GET http://localhost:5000/me
+####
+post http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "name":"Rayhan",
+    "email": "Rayhan@gmail.com",
+    "password": "123456"
+}
